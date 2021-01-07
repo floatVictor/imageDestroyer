@@ -41,7 +41,6 @@ for (const element of [$searchButton,$again]) {
         .then(response => response.json())
         .then((data) => {
 
-            go = true
             $stop.style.backgroundColor = 'var(--B-color)'
 
             //canvasContainer.style.visibility = 'visible'*
@@ -51,11 +50,12 @@ for (const element of [$searchButton,$again]) {
             $layerAcontainer.style.opacity = '0%'
             $layerAcontainer.style.visibily = 'hidden'
             $layerAcontainer.style.pointerEvents = 'none'
-
+        
             $layerBcontainer.style.opacity = '100%'
             $layerBcontainer.style.visibily = 'visible'
             $layerBcontainer.style.pointerEvents = 'all'
-
+           
+            go = true
             let i = 0;
 
             while(!checkURL(dataImage.value[i].url)) i++
@@ -86,7 +86,10 @@ $homeButton.addEventListener('click',()=>{
     $layerBcontainer.style.opacity = '0%'
     $layerBcontainer.style.visibily = 'hidden'
     $layerBcontainer.style.pointerEvents = 'none'
+    
+    goRand = true;
     go = false
+    
 
 })
 
