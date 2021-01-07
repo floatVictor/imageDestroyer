@@ -47,7 +47,7 @@ function setup() {
 
   valC = createP('').parent('values');
   createP('offset').parent('sliders');
-  CSlider = createSlider(-5, 5,random(-1,1),0.1).parent('sliders');
+  CSlider = createSlider(-5, 5,random(-0.2,0.2),0.1).parent('sliders');
 
   valC2 = createP('').parent('values');
   createP('offset modulation').parent('sliders');
@@ -55,7 +55,7 @@ function setup() {
 
   valD = createP('').parent('values');
   createP('stroke weight').parent('sliders');
-  DSlider = createSlider(0,15,random(0,5),1).parent('sliders');
+  DSlider = createSlider(0,15,0,1).parent('sliders');
 
   valE = createP('').parent('values');
   createP('stroke mutation').parent('sliders');
