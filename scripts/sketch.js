@@ -30,11 +30,11 @@ function setup() {
 
   nbCellX = createP('').parent('valuesAux');
   createP('Number of cell (X)').parent('slidersAux');
-  cellXSlider = createSlider(1, 200, random(10,100),1).parent('slidersAux');
+  cellXSlider = createSlider(1, 200, random(5,50),1).parent('slidersAux');
 
   nbCellY = createP('').parent('valuesAux');
   createP('Number of cell (Y)').parent('slidersAux');
-  cellYSlider = createSlider(0, 200, random(10,100),1).parent('slidersAux');
+  cellYSlider = createSlider(0, 200, random(5,50),1).parent('slidersAux');
 
 
   valA = createP('').parent('values');
@@ -47,7 +47,7 @@ function setup() {
 
   valC = createP('').parent('values');
   createP('offset').parent('sliders');
-  CSlider = createSlider(-5, 5,random(-0.2,0.2),0.1).parent('sliders');
+  CSlider = createSlider(-5, 5,0,0.1).parent('sliders');
 
   valC2 = createP('').parent('values');
   createP('offset modulation').parent('sliders');
@@ -59,7 +59,7 @@ function setup() {
 
   valE = createP('').parent('values');
   createP('stroke mutation').parent('sliders');
-  ESlider = createSlider(0,1,random(),0.01).parent('sliders');
+  ESlider = createSlider(0,1,0,0.01).parent('sliders');
 
   valSS = createP('').parent('values');
   createP('speed').parent('sliders');
