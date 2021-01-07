@@ -1,0 +1,158 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ImageDestroyer</title>
+  <link rel="shortcut icon" type="image/jpg" href="image/favIcon.png"/>
+
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+  <link rel="stylesheet" href="styles\main.css">
+
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="layerB">
+    <div class="layerBcontainer">
+      <div class="interactions">
+        <div class="modifiers">
+          <div class="switchesAux">
+            <div class="homeButton">
+              <input type="submit" value="Home"></button>
+            </div>
+            <div class="dlButton">
+              <input type="submit" value="Download"></button>
+            </div>
+          </div>
+          <div class="switches">
+            <div class="rand">
+              <input type="submit" value="Randomize"></button>
+            </div>
+            <div class="stop">
+              <input type="submit" value="Freeze"></button>
+            </div>
+            <div class="again">
+              <input type="submit" value="Destroy again"></button>
+            </div>
+          </div>
+          <div class="blocks">
+            <div class="vBlock">
+              <div id="valuesAux">
+              </div>
+              <div id="slidersAux">
+              </div>
+            </div>
+            <div class="v2Block">
+              <div id="values">
+              </div>
+              <div id="sliders">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="results">
+        <div id="image"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layerA">
+    <div class="layerAcontainer">
+      <h1>Hi, welcome to Image Destroyer</h1>
+      <h2>Let us know what you wanna destroy :</h2>
+      <br></br>
+      <div class="formulaire" >
+        <form method ="post" onsubmit="return false">
+          <div class="searchBar">
+            <input type="text" class="something">
+          </div>
+          <div class="searchButton">
+            <input type="submit" value="Destroy"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="logo">
+    <div class="loading">
+      <svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" width="280%" height="280%" viewBox="0 0 1000 1000" style="display: block;">
+      <rect class="cls-1" width="697.4281" height="651.95604"/>
+      <rect class="cls-1" x="603.44872" y="638.29707" width="16.2" height="51.49452"/>
+      <rect class="cls-1" x="619.11195" y="612.69116" width="16.2" height="100.41763"/>
+      <rect class="cls-1" x="634.77518" y="618.58374" width="16.3" height="65.65057"/>
+      <rect class="cls-1" x="650.43841" y="622.86349" width="16.2" height="75.63234"/>
+      <rect class="cls-1" x="587.78549" y="600.4809" width="16.2" height="75.63234"/>
+      <rect class="cls-1" x="681.76487" y="593.96461" width="15.66323" height="72.70572"/>
+
+      <rect id="1" class="cls-1" x="650.43841" y="713.10879" width="16.2" height="16.2"/>
+          <animate xlink:href="#1" attributeName="y" from="695" to="800" dur="2s" repeatCount="indefinite"/>
+      </rect>
+      <rect id="2" class="cls-1" x="681.76487" y="682.98678" width="16.2" height="16.2"/>
+          <animate xlink:href="#2" attributeName="y" from="662" to="800" dur="1.5s" repeatCount="indefinite"/>
+      </rect>
+      <rect id="3" class="cls-1" x="587.78549" y="698.65001" width="16.2" height="16.2"/>
+          <animate xlink:href="#3" attributeName="y" from="670" to="800" dur="3s" repeatCount="indefinite"/>
+      </rect>
+
+      <circle class="cls-2" cx="474.59687" cy="152" r="68.10989"/>
+      <polygon class="cls-2" points="257.488 547.164 78.973 547.164 168.231 392.565 257.488 237.967 346.746 392.565 436.003 547.164 257.488 547.164"/>
+      <polygon class="cls-2" points="474.597 547.164 336.007 547.164 405.302 427.142 474.597 307.119 543.892 427.142 613.187 547.164 474.597 547.164"/>
+      <rect class="cls-2" x="78.97346" y="547.16388" width="16.2" height="51.49452"/>
+      <rect class="cls-2" x="94.63668" y="521.55796" width="16.2" height="62.46401"/>
+      <rect class="cls-2" x="110.29991" y="512.81319" width="16.2" height="65.65057"/>
+      <rect class="cls-2" x="125.96314" y="513.9281" width="16.2" height="75.63234"/>
+      <rect class="cls-2" x="141.62637" y="537.16388" width="16.2" height="75.63234"/>
+      <rect class="cls-2" x="157.2896" y="502.83142" width="16.2" height="69.38836"/>
+
+      <rect id="4" class="cls-2" x="109.97024" y="597.133" width="16.2" height="16.2"/>
+          <animate xlink:href="#4" attributeName="y" from="570" to="650" dur="1s" repeatCount="indefinite"/>
+      </rect>
+
+      <rect id="5" class="cls-2" x="78.97346" y="613.93762" width="16.2" height="16.2"/>
+          <animate xlink:href="#5" attributeName="y" from="593" to="650" dur="2s" repeatCount="indefinite"/>
+      </rect>
+
+
+      <rect class="cls-2" x="406.48698" y="149.14286" width="16.2" height="84.97531"/>
+      <rect class="cls-2" x="422.15021" y="180.69608" width="16.2" height="38.33689"/>
+      <rect class="cls-2" x="437.81344" y="171.9513" width="16.2" height="108.40035"/>
+      <rect class="cls-2" x="453.47666" y="173.06621" width="16.2" height="75.63234"/>
+      <rect class="cls-2" x="469.13989" y="196.30199" width="16.2" height="66.77493"/>
+
+      <rect id="6" class="cls-2" x="422.15021" y="232.16839" width="16.2" height="16.2"/>
+          <animate xlink:href="#6" attributeName="y" from="220" to="450" dur="4s" repeatCount="indefinite"/>
+      </rect>
+      
+      <rect id="7" class="cls-2" x="406.48698" y="245.76533" width="16.2" height="16.2"/>
+          <animate xlink:href="#7" attributeName="y" from="220" to="450" dur="2.7s" repeatCount="indefinite"/>
+      </rect>
+      </svg>
+    </div>
+  </div>
+
+  <div class="layerO">
+    <div class="layerOcontainer">
+      <div class="textO">
+        <h3>ImageDestroyer</h3>
+        <p>&emsp;</p>
+        <h4>created by Ulysse Roussel & Victor Guichard</h4>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts\sketch.js"></script>
+  <script src="scripts\main.js"></script>
+</div>
+</body>
+</html>

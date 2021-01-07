@@ -1,0 +1,352 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+:root {
+    --A-color: #38248c;
+    --B-color: #9182d0;
+    --C-color: #dddddd;
+    
+    overflow: hidden;
+  }
+
+.container{
+    background: #dddddd;
+    height:100vh;
+    width:100vw;
+    position:relative;
+}
+
+h1{
+    font-size: 60pt;
+    color: var(--A-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    font-size: 36pt;
+    color: var(--A-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h3{
+    font-size: 18pt;
+    color: var(--B-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h4{
+    font-size: 12pt;
+    color: var(--B-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    visibility: visible;
+    display:flex;
+    align-items: flex-start;
+
+}
+
+svg:hover .cls-1{
+    fill: var(--B-color);
+    transform: scale(0.995);
+  
+}
+svg:hover .cls-2{
+    transform: scale(0.995);
+  
+}
+.cls-1{
+    fill: var(--A-color);
+}
+
+.cls-2{
+    fill: var(--C-color);
+}
+
+.layerO{
+    position:absolute;
+    visibility:hidden;
+    top:0px;
+    left:0px;
+    
+}
+
+.layerOcontainer{
+    flex-direction: column-reverse;
+    visibility: hidden;
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height:100vh;
+    width:100vw;
+}
+
+.logo{
+    padding:10px;
+    width: 50px;
+    height: 50px;
+    visibility:visible;
+    align-self: start;
+    justify-self: start;
+}
+
+.textO{
+    padding:10px;
+    visibility:visible;
+    display:flex;
+    align-items: flex-end;
+    flex-direction: row;
+}
+
+.layerA{
+    visibility:hidden;
+    position:absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    top:0px;
+    left:0px;
+    height:100vh;
+    width:100vw;
+}
+
+.layerAcontainer{
+    visibility: visible;
+    pointer-events: all;
+    opacity: 100%;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    transition: opacity 0.1s ease-in;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--C-color);
+}
+
+.searchBar input{
+    border: none;
+    outline: none;
+    color: var(--C-color);
+    font-size: 24pt;
+    background: hsl(0 0% 93%);
+    width: 550px;
+    padding: 7px 10px;
+    margin-right: 7px;
+    background: var(--B-color);
+    border-radius: 3px;
+}
+
+.searchBar input:hover,.searchBar input:focus{
+    transition: background-color 0.5s ease-out;
+    background-color:var(--A-color);
+}
+.searchButton input{
+    border: none;
+    outline: none;
+    color: var(--C-color);
+    font-size: 24pt;
+    background: hsl(0 0% 93%);
+    width: 170px;
+    padding: 7px 10px;
+    margin-right: 7px;
+    background: var(--B-color);
+    border-radius: 3px;
+}
+
+.searchButton input:hover{
+    background-color:var(--A-color);
+    transition: background-color 0.5s ease-out;
+    cursor: pointer;
+}
+
+.switchesAux input:hover{
+    background-color:var(--A-color);
+    transition: background-color 0.5s ease-out;
+    cursor: pointer;
+}
+
+.switches input:hover{
+    background-color:var(--A-color);
+    transition: background-color 0.5s ease-out;
+    cursor: pointer;
+}
+
+.layerB{
+    position: absolute;
+    visibility:hidden;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    top:0px;
+    left:0px;
+    height:100vh;
+    width:100vw;
+}
+
+.layerBcontainer{
+    visibility: visible;
+    pointer-events: none;
+    opacity : 0%;
+    transition: opacity 0.7s ease-out;
+}
+
+.interactions{
+    width:100vw;
+    height:100vh;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: absolute;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modifiers{
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.switchesAux{
+    display: flex;
+    flex-direction: row;
+    width: 94.3%;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3px;
+    margin: 10px;
+    margin-bottom: -8px;
+
+}
+
+.switchesAux input{
+    background: var(--B-color);
+    color: var(--C-color);
+    border: none;
+    outline: none;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    padding: 7px 15px;
+    margin: 2px;
+    font-size: 24pt;
+}
+
+.switches{
+    display: flex;
+    flex-direction: row;
+    width: 94.3%;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3px;
+    margin: 10px;
+
+}
+
+.switches input{
+    background: var(--B-color);
+    color: var(--C-color);
+    border: none;
+    outline: none;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    padding: 7px 10px;
+    margin: 2px;
+    font-size: 12pt;
+}
+
+.blocks{
+    width: 100%;
+}
+
+.vBlock{
+    display: flex;
+    flex-direction:row;
+    background: var(--B-color);
+    border-radius: 3px;
+    padding: 10px;
+    margin : 10px;
+    margin-top: 4px;
+    margin-bottom: -2px;
+}
+
+#valuesAux{
+    display: flex;
+    padding: 10px;
+    border-right: var(--C-color) 2px solid ;
+    flex-direction:column;
+    justify-content: space-around;
+}
+
+#slidersAux{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    flex-direction:column;
+}
+
+.v2Block{
+    display: flex;
+    flex-direction:row;
+    background: var(--B-color);
+    
+    border-radius: 3px;
+    padding: 10px;
+    margin : 10px;
+}
+
+#values{
+    display: flex;
+    padding: 10px;
+    border-right: var(--C-color) 2px solid ;
+    flex-direction:column;
+    justify-content: space-around;
+}
+
+#sliders{
+    display: flex;
+    
+    padding: 10px;
+    flex-direction:column;
+}
+
+.results{
+    display:flex;
+    flex-direction: column;
+    width:100vw;
+    height:100vh;
+}
+#image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; 
+}
+
+#image img{
+    display:none;
+}
+
+
+.image canvas{
+    position: static;
+    display:flex;
+    justify-content:center;
+}
+
+canvas{
+    min-width: 30vw;
+    min-height: 30vh;
+    max-height: 70vh;
+    max-width: 60vw;
+    border: var(--B-color) 3px solid ;
+    width: auto;
+}
